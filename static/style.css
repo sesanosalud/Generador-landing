@@ -136,3 +136,29 @@ body {
     margin: 2.5rem 0;
   }
 }
+
+/* FADE-IN ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+.features,
+.disclaimer {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.features {
+  animation-delay: 0.15s;
+}
+
+.disclaimer {
+  animation-delay: 0.3s;
+}
