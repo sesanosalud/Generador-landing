@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Generador de Plata Coloidal Sésano | Tecnología y Salud Natural</title>
+  <title>Generador de Plata Coloidal Sésano | Salud Natural y Tecnología Confiable</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="description"
-        content="Generador de Plata Coloidal Sésano. Tecnología confiable para la producción controlada de plata coloidal. Pago seguro, soporte y garantía.">
+        content="Generador de Plata Coloidal Sésano. Tecnología confiable para la producción controlada de plata coloidal. Pago seguro con Wompi, garantía y soporte.">
 
   <meta name="robots" content="index, follow">
 
@@ -21,21 +21,42 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Generador de Plata Coloidal Sésano</h1>
-      <p class="subtitle">Salud natural con tecnología confiable</p>
 
-      <a href="{{ wompi_url }}" class="cta-btn">Comprar ahora</a>
+    <div class="hero-text">
+
+      <!-- LOGO -->
+      <img
+        src="{{ url_for('static', filename='logo-sesano.png') }}"
+        alt="Sésano Salud Integral"
+        class="logo"
+        loading="eager">
+
+      <h1>Generador de Plata Coloidal Sésano</h1>
+
+      <p class="subtitle">
+        Salud natural con tecnología confiable
+      </p>
+
+      <a href="{{ wompi_url }}" class="cta-btn">
+        Comprar ahora
+      </a>
+
+      <p class="microcopy">
+        Pago seguro con Wompi · Envíos nacionales · Garantía Sésano
+      </p>
+
     </div>
 
     <div class="hero-image">
-      <img src="{{ url_for('static', filename='producto.png') }}"
-           alt="Generador de Plata Coloidal Sésano"
-           loading="lazy">
+      <img
+        src="{{ url_for('static', filename='producto.png') }}"
+        alt="Generador de Plata Coloidal Sésano"
+        loading="eager">
     </div>
+
   </section>
 
-  <!-- PRODUCT FEATURES -->
+  <!-- FEATURES -->
   <section class="features">
     <div class="feature-card">⚙️ Producción controlada y precisa</div>
     <div class="feature-card">🧪 Electrodos de plata pura 99.99%</div>
@@ -43,8 +64,8 @@
     <div class="feature-card">🔌 Fuente segura y estable</div>
   </section>
 
-  <!-- TRUST & WARRANTY -->
-  <section class="features">
+  <!-- TRUST -->
+  <section class="features trust">
     <div class="feature-card">🔒 Pago seguro con Wompi</div>
     <div class="feature-card">🛡️ Garantía de funcionamiento</div>
     <div class="feature-card">🚚 Envíos a nivel nacional</div>
@@ -68,7 +89,7 @@
    class="whatsapp-float"
    target="_blank"
    aria-label="WhatsApp contacto">
-   WhatsApp
+   💬
 </a>
 
 </body>
