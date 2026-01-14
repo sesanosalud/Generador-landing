@@ -52,7 +52,7 @@
         src="{{ url_for('static', filename='producto.webp') }}"
         alt="Generador de Plata Coloidal Sésano"
         class="product-image"
-        loading="eager">
+        loading="lazy">
     </div>
 
   </section>
@@ -102,6 +102,13 @@
    aria-label="WhatsApp contacto">
    💬
 </a>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-sticky-cta">
+  <a href="{{ wompi_url }}" class="cta-btn sticky-cta">
+    Comprar ahora
+  </a>
+</div>
 
 </body>
 </html>
