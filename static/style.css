@@ -33,29 +33,27 @@ body {
   color: #374151;
 }
 
-/* PRODUCT IMAGE (MERGED & CLEAN) */
-.hero-image img {
+/* LOGO */
+.logo-small {
+  max-width: 160px;
+  margin-bottom: 1.2rem;
+}
+
+/* PRODUCT IMAGE */
+.product-image {
   width: 100%;
-  max-width: 420px;
-
-  padding: 1.2rem;
+  max-width: 520px;
   border-radius: 20px;
-
-  background: radial-gradient(
-    circle at top,
-    rgba(255,255,255,0.65),
-    transparent 65%
-  );
-
+  padding: 1.2rem;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.6), transparent 60%);
   box-shadow:
     0 25px 60px rgba(0,0,0,0.18),
-    inset 0 0 0 1px rgba(255,255,255,0.35);
-
+    inset 0 0 0 1px rgba(255,255,255,0.4);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.hero-image img:hover {
-  transform: translateY(-4px) scale(1.015);
+.product-image:hover {
+  transform: translateY(-4px) scale(1.01);
   box-shadow: 0 35px 80px rgba(0,0,0,0.25);
 }
 
@@ -72,9 +70,20 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cta-btn=[], .cta-btn:hover {
+.cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(25,135,84,0.45);
+}
+
+.large-cta {
+  font-size: 1.2rem;
+  padding: 1.1rem 2rem;
+}
+
+.microcopy {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
 
 /* FEATURES */
@@ -93,6 +102,12 @@ body {
   font-weight: 500;
 }
 
+/* SECOND CTA */
+.cta-secondary {
+  text-align: center;
+  margin: 4rem 0;
+}
+
 /* DISCLAIMER */
 .disclaimer {
   background: #f9fafb;
@@ -103,53 +118,22 @@ body {
   color: #374151;
 }
 
-/* FADE-IN ANIMATION */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero,
-.features,
-.disclaimer {
-  animation: fadeUp 0.9s ease both;
-}
-
-/* WHATSAPP FLOAT (FIXED) */
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 22px;
   right: 22px;
-
   width: 56px;
   height: 56px;
-
   background-color: #25d366;
   color: white;
-
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 1.5rem;
+  text-align: center;
+  line-height: 56px;
+  font-size: 1.2rem;
   text-decoration: none;
-
   box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
   z-index: 1000;
-
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.whatsapp-float:hover {
-  transform: translateY(-3px) scale(1.06);
-  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.6);
 }
 
 /* MOBILE */
@@ -159,247 +143,47 @@ body {
     text-align: center;
   }
 
-  .hero-image img {
-    margin: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 1.5rem 1rem;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1.05rem;
-  }
-
-  .cta-btn {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .features {
-    margin: 2.5rem 0;
-  }
-
-  .whatsapp-float {
-    bottom: 16px;
-    right: 16px;
-    width: 52px;
-    height: 52px;
-    font-size: 1.4rem;
-  }
-}
-
-/* MOBILE + VISUAL BALANCE */
-.logo {
-  height: 36px; /* smaller logo */
-  margin-bottom: 12px;
-}
-
-.hero-image img {
-  max-width: 500px; /* larger product image */
-}
-
-.cta-secondary {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.large-cta {
-  font-size: 1.3rem;
-  padding: 1.2rem 2rem;
-}
-
-/* MOBILE IMPROVEMENTS */
-@media (max-width: 768px) {
-  .hero-image img {
-    max-width: 380px;
-  }
-
-  .cta-btn {
-    font-size: 1.05rem;
-    padding: 1rem;
-  }
-}
-/* ---------- GLOBAL RESET ---------- */
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ---------- CONTAINER ---------- */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1.2rem;
-}
-
-/* ---------- HERO ---------- */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  min-height: 85vh;
-}
-
-.hero-text {
-  flex: 1;
-}
-
-.hero-image {
-  flex: 1;
-  text-align: center;
-}
-
-/* LOGO FIX */
-.logo-small {
-  max-width: 140px;
-  margin-bottom: 1rem;
-}
-
-/* PRODUCT IMAGE FIX */
-.product-image {
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-/* ---------- TYPOGRAPHY ---------- */
-h1 {
-  font-size: 2.4rem;
-  line-height: 1.15;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 1.4rem;
-  opacity: 0.9;
-}
-
-/* ---------- CTA ---------- */
-.cta-btn {
-  display: inline-block;
-  padding: 0.9rem 1.4rem;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #1f6ae1, #4da3ff);
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(31, 106, 225, 0.35);
-}
-
-.large-cta {
-  font-size: 1.2rem;
-  padding: 1.1rem 2rem;
-}
-
-/* ---------- FEATURES ---------- */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin: 3rem 0;
-}
-
-.feature-card {
-  padding: 1rem;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #f7f9fc, #eef2f9);
-  font-size: 0.95rem;
-}
-
-/* ---------- CTA SECONDARY ---------- */
-.cta-secondary {
-  text-align: center;
-  margin: 3rem 0;
-}
-
-/* ---------- DISCLAIMER ---------- */
-.disclaimer {
-  font-size: 0.8rem;
-  opacity: 0.7;
-  margin-bottom: 4rem;
-}
-
-/* ---------- MOBILE FIXES ---------- */
-@media (max-width: 768px) {
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    min-height: auto;
-  }
-
-  h1 {
-    font-size: 1.9rem;
-  }
-
   .logo-small {
-    max-width: 110px;
+    max-width: 130px;
     margin: 0 auto 1rem;
   }
 
   .product-image {
-    max-width: 300px;
-    margin-top: 1.5rem;
+    max-width: 380px;
+    margin: auto;
   }
 
   .cta-btn {
     width: 100%;
   }
 }
-/* =========================
-   LOGO CONTROL
-========================= */
 
-.logo {
-  max-width: 220px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
+/* MOBILE STICKY CTA */
+.mobile-sticky-cta {
+  display: none;
 }
 
-/* Desktop refinement */
-@media (min-width: 769px) {
-  .logo {
-    max-width: 240px;
-  }
-}
-
-/* =========================
-   PRODUCT IMAGE CONTROL
-========================= */
-
-.product-image {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  margin: auto;
-  display: block;
-  border-radius: 18px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
-}
-
-/* Mobile optimization */
 @media (max-width: 768px) {
-  .product-image {
-    max-width: 300px;
-    margin-top: 1.5rem;
+  .mobile-sticky-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 -6px 20px rgba(0,0,0,0.12);
+    z-index: 999;
+  }
+
+  .sticky-cta {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  body {
+    padding-bottom: 90px;
   }
 }
