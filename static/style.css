@@ -195,3 +195,35 @@ body {
     font-size: 1.4rem;
   }
 }
+
+/* MOBILE + VISUAL BALANCE */
+.logo {
+  height: 36px; /* smaller logo */
+  margin-bottom: 12px;
+}
+
+.hero-image img {
+  max-width: 500px; /* larger product image */
+}
+
+.cta-secondary {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.large-cta {
+  font-size: 1.3rem;
+  padding: 1.2rem 2rem;
+}
+
+/* MOBILE IMPROVEMENTS */
+@media (max-width: 768px) {
+  .hero-image img {
+    max-width: 380px;
+  }
+
+  .cta-btn {
+    font-size: 1.05rem;
+    padding: 1rem;
+  }
+}
