@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Generador de Plata Coloidal Sésano</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Generador de Plata Coloidal Sésano. Salud natural con tecnología confiable.">
-    <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <title>Generador de Plata Coloidal Sésano</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generador de Plata Coloidal Sésano. Salud natural con tecnología confiable.">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-<header class="hero">
-    <h1>Generador de Plata Coloidal Sésano</h1>
-    <p>Salud natural con tecnología confiable</p>
-</header>
+<div class="container">
 
-<section class="producto">
-    <img src="{{ url_for('static', filename='producto.png') }}" alt="Generador de Plata Coloidal Sésano">
-    <div class="info">
-        <h2>¿Por qué elegir Sésano?</h2>
-        <ul>
-            <li>⚡ Producción controlada y programable</li>
-            <li>🧪 Electrodos de plata pura 99.99%</li>
-            <li>📊 Medidor TDS incluido</li>
-            <li>🔌 Fuente de alimentación segura</li>
-            <li>🌱 Uso doméstico y profesional</li>
-        </ul>
-        <a href="/comprar" class="btn">Comprar ahora</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Generador de Plata Coloidal Sésano</h1>
+      <p class="subtitle">Salud natural con tecnología confiable</p>
+
+      <a href="{{ wompi_url }}" class="cta-btn">Comprar ahora</a>
     </div>
-</section>
 
-<section class="disclaimer">
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='producto.png') }}"
+           alt="Generador de Plata Coloidal Sésano">
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature-card">⚙️ Producción controlada y precisa</div>
+    <div class="feature-card">🧪 Electrodos de plata pura 99.99%</div>
+    <div class="feature-card">📏 Medidor TDS incluido</div>
+    <div class="feature-card">🔌 Fuente segura y estable</div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="disclaimer">
     <h3>Información importante</h3>
     <p>
-        Este generador está diseñado para la producción de plata coloidal con fines educativos y de uso personal.
-        La plata coloidal no es un medicamento ni sustituye tratamientos médicos.
+      Este generador está diseñado para la producción de plata coloidal con fines educativos y de uso personal.
+      La plata coloidal no es un medicamento y no sustituye tratamientos médicos ni la consulta con profesionales
+      de la salud.
     </p>
-</section>
+  </section>
 
-<a href="https://wa.me/573113203388" class="whatsapp-float" target="_blank">WhatsApp</a>
+</div>
 
-<footer>
-    <p>WhatsApp: +57 311 320 33 88 · Instagram: @sesano_saludintegral</p>
-</footer>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/573113203388"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp contacto">
+   WhatsApp
+</a>
 
 </body>
 </html>
