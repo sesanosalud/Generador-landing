@@ -27,8 +27,8 @@
       <img
         src="{{ url_for('static', filename='logo-sesano.webp') }}"
         alt="Sésano Salud Integral"
-        class="logo logo-small"
-        loading="eager">
+        class="logo"
+        loading="lazy">
 
       <h1>Generador de Plata Coloidal Sésano</h1>
 
@@ -51,7 +51,7 @@
         src="{{ url_for('static', filename='producto.webp') }}"
         alt="Generador de Plata Coloidal Sésano"
         class="product-image"
-        loading="eager">
+        loading="lazy">
     </div>
 
   </section>
@@ -108,6 +108,20 @@
     Comprar ahora
   </a>
 </div>
+<script>
+  // CTA A/B TEST
+  (function () {
+    const variants = ['cta-green', 'cta-blue', 'cta-orange'];
+    const chosen = variants[Math.floor(Math.random() * variants.length)];
+
+    document.querySelectorAll('.cta-btn').forEach(btn => {
+      btn.classList.add(chosen);
+      btn.setAttribute('data-variant', chosen);
+    });
+
+    console.log('CTA variant:', chosen);
+  })();
+</script>
 
 </body>
 </html>
