@@ -332,3 +332,37 @@ html, body {
   position: relative;
   z-index: 1;
 }
+/* =========================
+   FINAL LOGO FIX (LOCKED)
+========================= */
+
+.logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 180px;
+  object-fit: contain;
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .logo {
+    max-width: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 170px;
+    margin: 0 auto 14px;
+  }
+}
+/* Force clean image rendering */
+img {
+  background-color: transparent;
+  image-rendering: auto;
+}
