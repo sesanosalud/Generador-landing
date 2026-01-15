@@ -1,6 +1,4 @@
-/* ======================
-   BASE
-====================== */
+/* BASE */
 body {
   margin: 0;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -15,45 +13,16 @@ body {
   padding: 2rem 1.5rem;
 }
 
-/* ======================
-   HERO
-====================== */
+/* HERO */
 .hero {
-  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1.3fr 1.7fr;
+  gap: 2.5rem;
   align-items: center;
   padding: 4rem 3rem;
   border-radius: 28px;
-  overflow: hidden;
   background:
-    radial-gradient(circle at 80% 40%, rgba(25,135,84,0.10), transparent 70%),
-    linear-gradient(180deg, #ffffff, #f7faf9);
-}
-
-/* Animated gradient overlay */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at 20% 30%,
-    rgba(25,135,84,0.12),
-    transparent 60%
-  );
-  animation: gradientMove 12s ease-in-out infinite alternate;
-  z-index: 0;
-}
-
-@keyframes gradientMove {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(40px); }
-}
-
-.hero > * {
-  position: relative;
-  z-index: 1;
+    radial-gradient(circle at 80% 40%, rgba(25,135,84,0.10), transparent 65%);
 }
 
 .hero h1 {
@@ -64,58 +33,38 @@ body {
 
 .subtitle {
   font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
   color: #374151;
 }
 
-/* ======================
-   LOGO
-====================== */
+/* LOGO */
 .logo-small {
-  max-width: 140px;
-  margin-bottom: 1rem;
+  max-width: 160px;
+  margin-bottom: 1.2rem;
 }
 
-/* ======================
-   PRODUCT IMAGE
-====================== */
+/* PRODUCT IMAGE */
 .product-image {
   width: 100%;
   max-width: 650px;
-  margin: auto;
   border-radius: 22px;
-  padding: 1.2rem;
-  background: radial-gradient(circle at top, rgba(255,255,255,0.6), transparent 60%);
+  padding: 1.4rem;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.65), transparent 60%);
   box-shadow:
     0 30px 70px rgba(0,0,0,0.22),
     inset 0 0 0 1px rgba(255,255,255,0.35);
-  transform: translateX(10px);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.product-image:hover {
-  transform: translateX(10px) translateY(-6px);
-  box-shadow: 0 40px 90px rgba(0,0,0,0.28);
-}
-
-/* ======================
-   CTA
-====================== */
+/* CTA */
 .cta-btn {
   display: inline-block;
   background: linear-gradient(135deg, #198754, #157347);
   color: white;
-  padding: 1rem 1.8rem;
+  padding: 1rem 2rem;
   border-radius: 12px;
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 10px 26px rgba(25,135,84,0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px rgba(25,135,84,0.45);
 }
 
 .large-cta {
@@ -129,13 +78,11 @@ body {
   color: #6b7280;
 }
 
-/* ======================
-   FEATURES
-====================== */
+/* FEATURES */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  gap: 1.6rem;
   margin: 4rem 0;
 }
 
@@ -143,54 +90,26 @@ body {
   background: linear-gradient(180deg, #ffffff, #f7f9fc);
   padding: 1.6rem;
   border-radius: 16px;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.08);
   font-weight: 500;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 22px 48px rgba(0,0,0,0.14);
-}
-
-/* ======================
-   SECOND CTA
-====================== */
+/* CTA SECONDARY */
 .cta-secondary {
   text-align: center;
   margin: 4rem 0;
 }
 
-/* ======================
-   DISCLAIMER
-====================== */
+/* DISCLAIMER */
 .disclaimer {
   background: #f9fafb;
   border-left: 6px solid #198754;
   padding: 1.6rem;
   border-radius: 12px;
   font-size: 0.95rem;
-  color: #374151;
 }
 
-/* ======================
-   SECTION DIVIDER
-====================== */
-.section-divider {
-  height: 1px;
-  margin: 4rem auto;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(0,0,0,0.15),
-    transparent
-  );
-}
-
-/* ======================
-   WHATSAPP FLOAT
-====================== */
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 22px;
@@ -204,42 +123,33 @@ body {
   line-height: 56px;
   font-size: 1.2rem;
   text-decoration: none;
-  box-shadow: 0 10px 26px rgba(37,211,102,0.45);
   z-index: 1000;
 }
 
-/* ======================
-   SCROLL REVEAL
-====================== */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ======================
-   MOBILE
-====================== */
+/* MOBILE */
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
+    padding: 3rem 1.2rem;
     text-align: center;
-    padding: 3rem 1.5rem;
   }
 
   .logo-small {
-    max-width: 120px;
-    margin: 0 auto 1rem;
+    max-width: 190px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
   }
 
   .product-image {
-    max-width: 380px;
-    transform: none;
+    max-width: 92vw;
+    margin: 1.6rem auto;
   }
 
   .cta-btn {
@@ -247,9 +157,7 @@ body {
   }
 }
 
-/* ======================
-   MOBILE STICKY CTA
-====================== */
+/* MOBILE STICKY CTA */
 .mobile-sticky-cta {
   display: none;
 }
@@ -261,68 +169,20 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 0.9rem;
-    background: rgba(255,255,255,0.96);
+    padding: 0.8rem;
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(6px);
-    box-shadow: 0 -6px 22px rgba(0,0,0,0.15);
+    box-shadow: 0 -6px 20px rgba(0,0,0,0.12);
     z-index: 999;
+  }
+
+  .sticky-cta {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem;
   }
 
   body {
     padding-bottom: 90px;
-  }
-}
-/* SCROLL REVEAL */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-@media (max-width: 768px) {
-  .logo-small {
-    max-width: 190px;   /* antes 130px */
-    margin: 0 auto 1.4rem;
-    display: block;
-  }
-}
-@media (max-width: 768px) {
-  .product-image {
-    max-width: 90vw;
-    margin: 1.5rem auto 2rem;
-    padding: 1.5rem;
-  }
-}
-@media (max-width: 768px) {
-  .hero {
-    padding: 3rem 1.2rem 2.5rem;
-    gap: 1.2rem;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-    line-height: 1.15;
-  }
-
-  .subtitle {
-    font-size: 1.15rem;
-  }
-}
-@media (max-width: 768px) {
-  .primary-cta {
-    font-size: 1.15rem;
-    padding: 1.1rem;
-    width: 100%;
-    margin-top: 1rem;
-  }
-}
-@media (max-width: 768px) {
-  .microcopy {
-    font-size: 0.95rem;
-    margin-top: 1rem;
   }
 }
