@@ -20,14 +20,14 @@
 <main class="container">
 
   <!-- HERO -->
-  <section class="hero reveal">
+  <section class="hero">
 
     <div class="hero-text">
 
       <img
         src="{{ url_for('static', filename='logo-sesano.webp') }}"
         alt="Sésano Salud Integral"
-        class="logo-small"
+        class="logo logo-small"
         loading="eager">
 
       <h1>Generador de Plata Coloidal Sésano</h1>
@@ -51,21 +51,21 @@
         src="{{ url_for('static', filename='producto.webp') }}"
         alt="Generador de Plata Coloidal Sésano"
         class="product-image"
-        loading="lazy">
+        loading="eager">
     </div>
 
   </section>
 
   <!-- FEATURES -->
-  <section class="features reveal">
+  <section class="features">
     <div class="feature-card">⚙️ Producción controlada y precisa</div>
     <div class="feature-card">🧪 Electrodos de plata pura 99.99%</div>
     <div class="feature-card">📏 Medidor TDS incluido</div>
     <div class="feature-card">🔌 Fuente segura y estable</div>
   </section>
 
-  <!-- SECOND CTA -->
-  <section class="cta-secondary reveal">
+  <!-- CTA SECONDARY -->
+  <section class="cta-secondary">
     <a href="{{ wompi_url }}" class="cta-btn large-cta">
       Comprar ahora
     </a>
@@ -75,7 +75,7 @@
   </section>
 
   <!-- TRUST -->
-  <section class="features trust reveal">
+  <section class="features trust">
     <div class="feature-card">🔒 Pago seguro con Wompi</div>
     <div class="feature-card">🛡️ Garantía de funcionamiento</div>
     <div class="feature-card">🚚 Envíos a nivel nacional</div>
@@ -83,7 +83,7 @@
   </section>
 
   <!-- DISCLAIMER -->
-  <section class="disclaimer reveal">
+  <section class="disclaimer">
     <h3>Información importante</h3>
     <p>
       Este generador está diseñado para la producción de plata coloidal con fines educativos y de uso personal.
@@ -94,7 +94,7 @@
 
 </main>
 
-<!-- WHATSAPP FLOAT -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/573113203388"
    class="whatsapp-float"
    target="_blank"
@@ -102,22 +102,12 @@
    💬
 </a>
 
-<!-- SCROLL REVEAL SCRIPT -->
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-
-  const revealOnScroll = () => {
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight - 80) {
-        el.classList.add('active');
-      }
-    });
-  };
-
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll();
-</script>
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-sticky-cta">
+  <a href="{{ wompi_url }}" class="cta-btn sticky-cta">
+    Comprar ahora
+  </a>
+</div>
 
 </body>
 </html>
