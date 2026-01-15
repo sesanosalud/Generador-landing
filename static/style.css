@@ -246,3 +246,89 @@ html, body {
 
   .product-image {
     max-width: 2
+/* =========================
+   INSTAGRAM ADS OPTIMIZATION
+========================= */
+
+/* Reduce top spacing for paid traffic */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 14px;
+  }
+
+  .hero {
+    margin-top: 12px;
+    margin-bottom: 36px;
+    gap: 24px;
+  }
+
+  .hero-text h1 {
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    margin-bottom: 18px;
+  }
+
+  .primary-cta {
+    margin-top: 12px;
+  }
+
+  .microcopy {
+    margin-top: 10px;
+  }
+}
+
+/* Make product closer to CTA (conversion zone) */
+@media (max-width: 768px) {
+  .hero-image {
+    margin-top: -6px;
+  }
+}
+/* =========================
+   TECH GRADIENT HERO BACKGROUND
+========================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      600px circle at 85% 40%,
+      rgba(22, 163, 74, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      500px circle at 10% 80%,
+      rgba(37, 99, 235, 0.08),
+      transparent 55%
+    );
+}
+
+/* Soft animated overlay (very subtle) */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0),
+    rgba(255,255,255,0.04)
+  );
+  animation: shimmer 12s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.65; }
+  100% { opacity: 0.4; }
+}
+
+/* Ensure content stays above background */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
